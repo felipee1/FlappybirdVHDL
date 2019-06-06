@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Laboratorios\Desktop\Jorgineo\jueguito\TOP.ncd
+OUTFILE=C:\Users\Laboratorios\Desktop\Jorgineo\jueguito\TOP.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Laboratorios\Desktop\Jorgineo\jueguito
+LICENSE=WebPack
+USER_INFO=211037310_0_0_834

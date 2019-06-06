@@ -1,0 +1,642 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: TOP.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : TOP
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Laboratorios\Desktop\Jorgineo\jueguito\Top.vhd" into library work
+Parsing entity <TOP>.
+Parsing architecture <Behavioral> of entity <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <TOP> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TOP>.
+    Related source file is "c:/users/laboratorios/desktop/jorgineo/jueguito/top.vhd".
+    Found 1-bit register for signal <clk25>.
+    Found 18-bit register for signal <count>.
+    Found 10-bit register for signal <countcano>.
+    Found 4-bit register for signal <printa>.
+    Found 10-bit register for signal <controlcano1h>.
+    Found 10-bit register for signal <controlcano1hf>.
+    Found 10-bit register for signal <controlcano2h>.
+    Found 10-bit register for signal <controlcano2hf>.
+    Found 10-bit register for signal <controlcano3h>.
+    Found 10-bit register for signal <controlcano3hf>.
+    Found 10-bit register for signal <controlv>.
+    Found 10-bit register for signal <controlvf>.
+    Found 10-bit register for signal <controlcano1vf>.
+    Found 10-bit register for signal <controlcano2vf>.
+    Found 10-bit register for signal <controlcano3vf>.
+    Found 1-bit register for signal <colisao>.
+    Found 28-bit register for signal <countempo>.
+    Found 26-bit register for signal <countjmp>.
+    Found 1-bit register for signal <jumpt>.
+    Found 1-bit register for signal <jumphold>.
+    Found 1-bit register for signal <red_out>.
+    Found 1-bit register for signal <green_out>.
+    Found 1-bit register for signal <blue_out>.
+    Found 1-bit register for signal <hs_out>.
+    Found 1-bit register for signal <vs_out>.
+    Found 10-bit register for signal <horizontal_counter>.
+    Found 10-bit register for signal <vertical_counter>.
+    Found 1-bit register for signal <clk50>.
+    Found 18-bit adder for signal <count[17]_GND_6_o_add_0_OUT> created at line 64.
+    Found 10-bit adder for signal <countcano[9]_GND_6_o_add_1_OUT> created at line 65.
+    Found 10-bit adder for signal <countcano[9]_GND_6_o_add_5_OUT> created at line 71.
+    Found 28-bit adder for signal <countempo[27]_GND_6_o_add_18_OUT> created at line 111.
+    Found 10-bit adder for signal <controlcano1vf[9]_GND_6_o_add_88_OUT> created at line 160.
+    Found 10-bit adder for signal <controlcano2vf[9]_GND_6_o_add_101_OUT> created at line 172.
+    Found 10-bit adder for signal <controlcano3vf[9]_GND_6_o_add_114_OUT> created at line 183.
+    Found 10-bit adder for signal <controlv[9]_GND_6_o_add_129_OUT> created at line 198.
+    Found 10-bit adder for signal <controlvf[9]_GND_6_o_add_130_OUT> created at line 199.
+    Found 26-bit adder for signal <countjmp[25]_GND_6_o_add_163_OUT> created at line 233.
+    Found 10-bit adder for signal <horizontal_counter[9]_GND_6_o_add_223_OUT> created at line 297.
+    Found 10-bit adder for signal <vertical_counter[9]_GND_6_o_add_225_OUT> created at line 299.
+    Found 10-bit subtractor for signal <GND_6_o_GND_6_o_sub_136_OUT<9:0>> created at line 203.
+    Found 10-bit subtractor for signal <GND_6_o_GND_6_o_sub_137_OUT<9:0>> created at line 204.
+    Found 10-bit subtractor for signal <GND_6_o_GND_6_o_sub_146_OUT<9:0>> created at line 213.
+    Found 10-bit subtractor for signal <GND_6_o_GND_6_o_sub_147_OUT<9:0>> created at line 214.
+    Found 10-bit subtractor for signal <GND_6_o_GND_6_o_sub_156_OUT<9:0>> created at line 223.
+    Found 10-bit subtractor for signal <GND_6_o_GND_6_o_sub_157_OUT<9:0>> created at line 224.
+    Found 10-bit subtractor for signal <GND_6_o_GND_6_o_sub_167_OUT<9:0>> created at line 235.
+    Found 10-bit subtractor for signal <GND_6_o_GND_6_o_sub_168_OUT<9:0>> created at line 236.
+    Found 18-bit comparator greater for signal <PWR_6_o_count[17]_LessThan_5_o> created at line 69
+    Found 10-bit comparator greater for signal <GND_6_o_countcano[9]_LessThan_9_o> created at line 73
+    Found 10-bit comparator lessequal for signal <n0017> created at line 85
+    Found 10-bit comparator greater for signal <horizontal_counter[9]_PWR_6_o_LessThan_14_o> created at line 86
+    Found 28-bit comparator greater for signal <GND_6_o_countempo[27]_LessThan_20_o> created at line 112
+    Found 10-bit comparator greater for signal <n0029> created at line 118
+    Found 10-bit comparator lessequal for signal <n0031> created at line 120
+    Found 10-bit comparator lessequal for signal <n0034> created at line 122
+    Found 10-bit comparator lessequal for signal <n0036> created at line 122
+    Found 10-bit comparator lessequal for signal <n0038> created at line 122
+    Found 10-bit comparator lessequal for signal <n0041> created at line 122
+    Found 10-bit comparator lessequal for signal <n0043> created at line 122
+    Found 10-bit comparator lessequal for signal <n0048> created at line 124
+    Found 10-bit comparator lessequal for signal <n0051> created at line 126
+    Found 10-bit comparator lessequal for signal <n0053> created at line 126
+    Found 10-bit comparator lessequal for signal <n0055> created at line 126
+    Found 10-bit comparator lessequal for signal <n0058> created at line 126
+    Found 10-bit comparator lessequal for signal <n0060> created at line 126
+    Found 10-bit comparator lessequal for signal <n0065> created at line 128
+    Found 10-bit comparator lessequal for signal <n0068> created at line 130
+    Found 10-bit comparator lessequal for signal <n0070> created at line 130
+    Found 10-bit comparator lessequal for signal <n0072> created at line 130
+    Found 10-bit comparator lessequal for signal <n0075> created at line 130
+    Found 10-bit comparator lessequal for signal <n0077> created at line 130
+    Found 10-bit comparator lessequal for signal <n0120> created at line 154
+    Found 10-bit comparator greater for signal <vertical_counter[9]_controlcano1vf[9]_LessThan_84_o> created at line 154
+    Found 10-bit comparator lessequal for signal <n0124> created at line 155
+    Found 10-bit comparator greater for signal <horizontal_counter[9]_controlcano1hf[9]_LessThan_86_o> created at line 155
+    Found 10-bit comparator lessequal for signal <n0131> created at line 160
+    Found 10-bit comparator greater for signal <vertical_counter[9]_PWR_6_o_LessThan_91_o> created at line 160
+    Found 10-bit comparator greater for signal <vertical_counter[9]_controlcano2vf[9]_LessThan_97_o> created at line 166
+    Found 10-bit comparator lessequal for signal <n0139> created at line 167
+    Found 10-bit comparator greater for signal <horizontal_counter[9]_controlcano2hf[9]_LessThan_99_o> created at line 167
+    Found 10-bit comparator lessequal for signal <n0146> created at line 172
+    Found 10-bit comparator greater for signal <vertical_counter[9]_controlcano3vf[9]_LessThan_110_o> created at line 177
+    Found 10-bit comparator lessequal for signal <n0153> created at line 178
+    Found 10-bit comparator greater for signal <horizontal_counter[9]_controlcano3hf[9]_LessThan_112_o> created at line 178
+    Found 10-bit comparator lessequal for signal <n0160> created at line 183
+    Found 10-bit comparator lessequal for signal <n0165> created at line 189
+    Found 10-bit comparator greater for signal <vertical_counter[9]_controlvf[9]_LessThan_123_o> created at line 189
+    Found 10-bit comparator lessequal for signal <n0169> created at line 190
+    Found 10-bit comparator greater for signal <horizontal_counter[9]_GND_6_o_LessThan_125_o> created at line 190
+    Found 10-bit comparator greater for signal <GND_6_o_controlcano1hf[9]_LessThan_134_o> created at line 202
+    Found 10-bit comparator greater for signal <GND_6_o_controlcano1vf[9]_LessThan_135_o> created at line 202
+    Found 10-bit comparator greater for signal <controlcano1hf[9]_GND_6_o_LessThan_138_o> created at line 205
+    Found 10-bit comparator greater for signal <GND_6_o_controlcano2hf[9]_LessThan_144_o> created at line 212
+    Found 10-bit comparator greater for signal <GND_6_o_controlcano2vf[9]_LessThan_145_o> created at line 212
+    Found 10-bit comparator greater for signal <controlcano2hf[9]_GND_6_o_LessThan_148_o> created at line 215
+    Found 10-bit comparator greater for signal <GND_6_o_controlcano3hf[9]_LessThan_154_o> created at line 222
+    Found 10-bit comparator greater for signal <GND_6_o_controlcano3vf[9]_LessThan_155_o> created at line 222
+    Found 10-bit comparator greater for signal <controlcano3hf[9]_GND_6_o_LessThan_158_o> created at line 225
+    Found 26-bit comparator greater for signal <countjmp[25]_GND_6_o_LessThan_165_o> created at line 234
+    Found 10-bit comparator greater for signal <GND_6_o_controlv[9]_LessThan_166_o> created at line 234
+    Found 10-bit comparator greater for signal <GND_6_o_horizontal_counter[9]_LessThan_220_o> created at line 283
+    Found 10-bit comparator greater for signal <horizontal_counter[9]_GND_6_o_LessThan_221_o> created at line 284
+    Found 10-bit comparator greater for signal <GND_6_o_vertical_counter[9]_LessThan_222_o> created at line 290
+    Found 10-bit comparator greater for signal <vertical_counter[9]_GND_6_o_LessThan_223_o> created at line 291
+    Summary:
+	inferred  19 Adder/Subtractor(s).
+	inferred 226 D-type flip-flop(s).
+	inferred  57 Comparator(s).
+	inferred  62 Multiplexer(s).
+Unit <TOP> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 19
+ 10-bit adder                                          : 8
+ 10-bit subtractor                                     : 8
+ 18-bit adder                                          : 1
+ 26-bit adder                                          : 1
+ 28-bit adder                                          : 1
+# Registers                                            : 28
+ 1-bit register                                        : 10
+ 10-bit register                                       : 14
+ 18-bit register                                       : 1
+ 26-bit register                                       : 1
+ 28-bit register                                       : 1
+ 4-bit register                                        : 1
+# Comparators                                          : 57
+ 10-bit comparator greater                             : 26
+ 10-bit comparator lessequal                           : 28
+ 18-bit comparator greater                             : 1
+ 26-bit comparator greater                             : 1
+ 28-bit comparator greater                             : 1
+# Multiplexers                                         : 62
+ 10-bit 2-to-1 multiplexer                             : 37
+ 28-bit 2-to-1 multiplexer                             : 8
+ 4-bit 2-to-1 multiplexer                              : 17
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <TOP>.
+The following registers are absorbed into accumulator <countcano>: 1 register on signal <countcano>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <horizontal_counter>: 1 register on signal <horizontal_counter>.
+The following registers are absorbed into counter <countjmp>: 1 register on signal <countjmp>.
+The following registers are absorbed into counter <vertical_counter>: 1 register on signal <vertical_counter>.
+Unit <TOP> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 14
+ 10-bit adder                                          : 5
+ 10-bit subtractor                                     : 8
+ 28-bit adder                                          : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 18-bit up counter                                     : 1
+ 26-bit up counter                                     : 1
+# Accumulators                                         : 1
+ 10-bit up accumulator                                 : 1
+# Registers                                            : 152
+ Flip-Flops                                            : 152
+# Comparators                                          : 57
+ 10-bit comparator greater                             : 26
+ 10-bit comparator lessequal                           : 28
+ 18-bit comparator greater                             : 1
+ 26-bit comparator greater                             : 1
+ 28-bit comparator greater                             : 1
+# Multiplexers                                         : 62
+ 10-bit 2-to-1 multiplexer                             : 37
+ 28-bit 2-to-1 multiplexer                             : 8
+ 4-bit 2-to-1 multiplexer                              : 17
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <controlcano1h_0> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <controlcano1hf_0> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <controlcano2h_0> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <controlcano3hf_0> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <controlcano2hf_0> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <controlcano3h_0> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <printa_2> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <printa_3> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <printa_1> of sequential type is unconnected in block <TOP>.
+
+Optimizing unit <TOP> ...
+WARNING:Xst:2677 - Node <printa_0> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:1293 - FF/Latch <countempo_27> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <controlcano3hf_1> in Unit <TOP> is equivalent to the following FF/Latch, which will be removed : <controlcano3h_1> 
+INFO:Xst:2261 - The FF/Latch <controlvf_0> in Unit <TOP> is equivalent to the following FF/Latch, which will be removed : <controlv_0> 
+INFO:Xst:2261 - The FF/Latch <controlvf_1> in Unit <TOP> is equivalent to the following FF/Latch, which will be removed : <controlv_1> 
+INFO:Xst:2261 - The FF/Latch <controlvf_2> in Unit <TOP> is equivalent to the following FF/Latch, which will be removed : <controlv_2> 
+INFO:Xst:2261 - The FF/Latch <controlcano1h_1> in Unit <TOP> is equivalent to the following FF/Latch, which will be removed : <controlcano1hf_1> 
+INFO:Xst:2261 - The FF/Latch <controlcano2h_1> in Unit <TOP> is equivalent to the following FF/Latch, which will be removed : <controlcano2hf_1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 8.
+FlipFlop vertical_counter_8 has been replicated 1 time(s)
+FlipFlop vertical_counter_9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 211
+ Flip-Flops                                            : 211
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TOP.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1067
+#      GND                         : 1
+#      INV                         : 13
+#      LUT1                        : 94
+#      LUT2                        : 20
+#      LUT3                        : 94
+#      LUT4                        : 232
+#      LUT5                        : 107
+#      LUT6                        : 188
+#      MUXCY                       : 211
+#      MUXF7                       : 5
+#      VCC                         : 1
+#      XORCY                       : 101
+# FlipFlops/Latches                : 211
+#      FD                          : 28
+#      FDE                         : 82
+#      FDR                         : 15
+#      FDRE                        : 84
+#      FDSE                        : 2
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 8
+#      IBUF                        : 3
+#      OBUF                        : 5
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             211  out of  18224     1%  
+ Number of Slice LUTs:                  748  out of   9112     8%  
+    Number used as Logic:               748  out of   9112     8%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    774
+   Number with an unused Flip Flop:     563  out of    774    72%  
+   Number with an unused LUT:            26  out of    774     3%  
+   Number of fully used LUT-FF pairs:   185  out of    774    23%  
+   Number of unique control sets:        16
+
+IO Utilization: 
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    232     3%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 1     |
+clk50                              | BUFG                   | 29    |
+clk25                              | BUFG                   | 181   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.770ns (Maximum Frequency: 147.706MHz)
+   Minimum input arrival time before clock: 5.183ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 1.913ns (frequency: 522.821MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.913ns (Levels of Logic = 1)
+  Source:            clk50 (FF)
+  Destination:       clk50 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: clk50 to clk50
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  clk50 (clk50)
+     INV:I->O              1   0.206   0.579  clk50_INV_1_o1_INV_0 (clk50_INV_1_o)
+     FDE:D                     0.102          clk50
+    ----------------------------------------
+    Total                      1.913ns (0.755ns logic, 1.158ns route)
+                                       (39.5% logic, 60.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk50'
+  Clock period: 5.732ns (frequency: 174.473MHz)
+  Total number of paths / destination ports: 1170 / 85
+-------------------------------------------------------------------------
+Delay:               5.732ns (Levels of Logic = 4)
+  Source:            count_4 (FF)
+  Destination:       countcano_3 (FF)
+  Source Clock:      clk50 rising
+  Destination Clock: clk50 rising
+
+  Data Path: count_4 to countcano_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.447   1.015  count_4 (count_4)
+     LUT6:I0->O            1   0.203   0.580  PWR_6_o_count[17]_LessThan_5_o23 (PWR_6_o_count[17]_LessThan_5_o22)
+     LUT6:I5->O            1   0.205   0.580  PWR_6_o_count[17]_LessThan_5_o24 (PWR_6_o_count[17]_LessThan_5_o23)
+     LUT6:I5->O           21   0.205   1.114  PWR_6_o_count[17]_LessThan_5_o25 (PWR_6_o_count[17]_LessThan_5_o)
+     LUT2:I1->O           10   0.205   0.856  _n0837_inv1 (_n0837_inv)
+     FDSE:CE                   0.322          countcano_3
+    ----------------------------------------
+    Total                      5.732ns (1.587ns logic, 4.145ns route)
+                                       (27.7% logic, 72.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk25'
+  Clock period: 6.770ns (frequency: 147.706MHz)
+  Total number of paths / destination ports: 28509 / 390
+-------------------------------------------------------------------------
+Delay:               6.770ns (Levels of Logic = 7)
+  Source:            controlcano3vf_6 (FF)
+  Destination:       red_out (FF)
+  Source Clock:      clk25 rising
+  Destination Clock: clk25 rising
+
+  Data Path: controlcano3vf_6 to red_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              11   0.447   1.227  controlcano3vf_6 (controlcano3vf_6)
+     LUT6:I1->O            2   0.203   0.617  Madd_controlcano3vf[9]_GND_6_o_add_114_OUT_cy<7>11 (Madd_controlcano3vf[9]_GND_6_o_add_114_OUT_cy<7>)
+     LUT2:I1->O            4   0.205   0.931  Madd_controlcano3vf[9]_GND_6_o_add_114_OUT_xor<8>11 (controlcano3vf[9]_GND_6_o_add_114_OUT<8>)
+     LUT4:I0->O            1   0.203   0.000  Mcompar_controlcano3vf[9]_vertical_counter[9]_LessThan_116_o_lut<4> (Mcompar_controlcano3vf[9]_vertical_counter[9]_LessThan_116_o_lut<4>)
+     MUXCY:S->O            5   0.172   0.715  Mcompar_controlcano3vf[9]_vertical_counter[9]_LessThan_116_o_cy<4> (controlcano3vf[9]_vertical_counter[9]_LessThan_116_o)
+     LUT5:I4->O            1   0.205   0.684  Mmux_printa[3]_printa[3]_mux_197_OUT212_SW0 (N65)
+     LUT6:I4->O            3   0.203   0.651  Mmux_printa[3]_printa[3]_mux_197_OUT212 (Mmux_printa[3]_printa[3]_mux_197_OUT214)
+     LUT6:I5->O            1   0.205   0.000  green_out_glue_set (green_out_glue_set)
+     FDR:D                     0.102          green_out
+    ----------------------------------------
+    Total                      6.770ns (1.945ns logic, 4.825ns route)
+                                       (28.7% logic, 71.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.908ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       clk50 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RST to clk50
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  RST_IBUF (RST_IBUF)
+     INV:I->O              1   0.206   0.579  RST_inv1_INV_0 (RST_inv)
+     FDE:CE                    0.322          clk50
+    ----------------------------------------
+    Total                      2.908ns (1.750ns logic, 1.158ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk25'
+  Total number of paths / destination ports: 128 / 128
+-------------------------------------------------------------------------
+Offset:              5.183ns (Levels of Logic = 4)
+  Source:            rstemp (PAD)
+  Destination:       countempo_17 (FF)
+  Destination Clock: clk25 rising
+
+  Data Path: rstemp to countempo_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            47   1.222   1.849  rstemp_IBUF (rstemp_IBUF)
+     LUT6:I1->O            5   0.203   0.715  Mmux_countempo[27]_countempo[27]_mux_200_OUT1141 (Mmux_countempo[27]_countempo[27]_mux_200_OUT114)
+     LUT6:I5->O            1   0.205   0.684  Mmux_countempo[27]_countempo[27]_mux_200_OUT111 (countempo[27]_countempo[27]_mux_200_OUT<19>)
+     LUT4:I2->O            1   0.203   0.000  countempo_19_rstpot (countempo_19_rstpot)
+     FD:D                      0.102          countempo_19
+    ----------------------------------------
+    Total                      5.183ns (1.935ns logic, 3.248ns route)
+                                       (37.3% logic, 62.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk25'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            red_out (FF)
+  Destination:       red_out (PAD)
+  Source Clock:      clk25 rising
+
+  Data Path: red_out to red_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.447   0.579  red_out (red_out_OBUF)
+     OBUF:I->O                 2.571          red_out_OBUF (red_out)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    1.913|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk25
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk25          |    6.770|         |         |         |
+clk50          |    8.822|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk50
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk50          |    5.732|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.17 secs
+ 
+--> 
+
+Total memory usage is 260972 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+
